@@ -328,13 +328,13 @@ export default remon;</code></pre>
             
           </address>
 
-          <!-- نموذج غير وظيفي: لا action ولا إرسال فعلي -->
-          <form class="form" onsubmit="return false">
-            <div class="field"><label for="name">الاسم الكامل</label><input id="name" type="text" autocomplete="name"></div>
-            <div class="field"><label for="email">البريد الإلكتروني</label><input id="email" type="email" autocomplete="email"></div>
-            <div class="field full"><label for="phone">رقم الهاتف</label><input id="phone" type="tel" autocomplete="tel"></div>
-            <div class="field full"><label for="msg">رسالتك</label><textarea id="msg" rows="5"></textarea></div>
-            <button class="btn btn-primary full" type="button">ابعت الرسالة</button>
+          <form class="form" id="contact-form">
+            <div class="field"><label for="name">الاسم الكامل</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="email">البريد الإلكتروني</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field full"><label for="phone">رقم الهاتف</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field full"><label for="msg">رسالتك</label><textarea id="msg" name="message" rows="5" required></textarea></div>
+            <p class="full">سيتم فتح تطبيق البريد لإرسال رسالتك.</p>
+            <button class="btn btn-primary full" type="submit">ابعت الرسالة</button>
           </form>
         </div>
       </div>
@@ -413,6 +413,7 @@ export default remon;</code></pre>
     const themeToggle = document.querySelector(".theme-toggle");
     const settingsPanel = document.querySelector("#appearance-settings");
     const settingsTrigger = document.querySelector(".settings-trigger");
+    const contactForm = document.querySelector("#contact-form");
 
     const setTheme = (theme) => {
       document.documentElement.dataset.theme = theme;
@@ -432,6 +433,25 @@ export default remon;</code></pre>
     settingsPanel.querySelector(".settings-close").addEventListener("click", () => settingsPanel.close());
     settingsPanel.addEventListener("click", (event) => {
       if (event.target === settingsPanel) settingsPanel.close();
+    });
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(contactForm);
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const phone = formData.get("phone");
+      const message = formData.get("message");
+      const body = [
+        `الاسم: ${name}`,
+        `البريد الإلكتروني: ${email}`,
+        phone ? `رقم الهاتف: ${phone}` : "",
+        "",
+        message
+      ].filter((line) => line !== "").join("\n");
+      const subject = encodeURIComponent(`رسالة من ${name}`);
+
+      window.location.href = `mailto:remonalfons21@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
     });
   </script>
 </body>
