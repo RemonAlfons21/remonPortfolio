@@ -936,7 +936,16 @@ input[name="filter"] {
   min-height: 170px;
   display: grid;
   place-items: center;
-  font-size: 3.5rem;
+}
+
+.card-thumb svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 .t1 { background: linear-gradient(135deg, #6540b6, #b18bea); }
