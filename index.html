@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ريمون الفونس وهيب، مطور واجهات أمامية من القاهرة. بشتغل بـ HTML و CSS و JavaScript وبتعلّم Full-stack.">
+  <meta name="keywords" content="ريمون الفونس وهيب, مطور ويب, Front-end Developer, HTML, CSS, JavaScript, القاهرة">
+  <meta property="og:title" content="ريمون الفونس وهيب | مطور واجهات أمامية">
+  <meta property="og:description" content="مطور واجهات أمامية من القاهرة، بشتغل بـ HTML و CSS و JavaScript.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>ريمون الفونس وهيب | مطور واجهات أمامية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      let theme = systemTheme;
+      try {
+        theme = localStorage.getItem("color-theme") || systemTheme;
+      } catch {}
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#hero-section">
+        <span class="logo-code" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5 7.5 4 12l4.5 4.5M15.5 7.5 20 12l-4.5 4.5M13.5 6l-3 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span>ريمون الفونس</span>
+      </a>
+      <div class="header-tools">
+        <nav aria-label="القائمة الرئيسية">
+          <ul class="nav-list">
+            <li><a href="#hero-section">الرئيسية</a></li>
+            <li><a href="#about">عني</a></li>
+            <li><a href="#portfolio">الأعمال</a></li>
+            <li><a href="#experience">الخبرة</a></li>
+            <li><a href="#testimonials">التوصيات</a></li>
+            <li><a href="#contact">تواصل</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="الوضع الداكن" title="تبديل الوضع الفاتح والداكن">
+          <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+          <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          <span class="theme-toggle-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== 1) الرئيسية ========== -->
+    <section id="hero-section" class="hero">
+      <button class="settings-trigger" type="button" aria-label="إعدادات المظهر" aria-haspopup="dialog" aria-controls="appearance-settings" title="إعدادات المظهر">
+        <span aria-hidden="true">⚙</span>
+      </button>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">بتعلّم Full-stack خطوة بخطوة</span>
+          <p class="hello">مرحباً، أنا 👋</p>
+          <h1>ريمون الفونس وهيب</h1>
+          <p class="role">Front-end Developer</p>
+          <p class="lead">بحب أبني واجهات ويب بسيطة وواضحة، وبحاول أفهم كل سطر كود بكتبه. بشتغل بـ HTML و CSS و JavaScript.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#portfolio">استكشف أعمالي</a>
+            <a class="btn btn-outline" href="#contact">تواصل معي</a>
+          </div>
+          <ul class="chips" aria-label="التقنيات"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+        <div class="hero-art">
+          <div class="hero-visual">
+            <img src="img/ChatGPT%20Image%20May%2027,%202026,%2011_17_08%20PM.png" alt="صورة ريمون الفونس وهيب">
+          </div>
+          <div class="hero-tech-icons" aria-hidden="true">
+            <span class="hero-tech-icon hero-tech-icon--html">HTML</span>
+            <span class="hero-tech-icon hero-tech-icon--css">CSS</span>
+            <span class="hero-tech-icon hero-tech-icon--js">JS</span>
+          </div>
+        </div>
+      </div>
+      <p class="scroll-cue"><a href="#about">اكتشف المزيد ↓</a></p>
+    </section>
+
+    <!-- ========== 2) عني ========== -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">من أنا</p>
+          <h2>عن ريمون</h2>
+        </header>
+
+        <div class="about-grid">
+          <div>
+            <h3>بحب أحوّل الأفكار لحاجة بتشتغل</h3>
+            <p>بدأت أتعلم البرمجة لأني بحب التكنولوجيا وحل المشكلات وبناء الحاجات من الصفر.</p>
+            <p>بشتغل بـ HTML و CSS و JavaScript، وبتعلّم دلوقتي الـ Fetch API و async/await، وهدفي أبقى Full-stack developer.</p>
+            <h4>ما أقدمه</h4>
+            <ul class="check-list">
+              <li>واجهات ويب متجاوبة بـ HTML و CSS</li>
+              <li>تفاعل بـ JavaScript (DOM و Events)</li>
+              <li>تطبيقات CRUD بتحفظ البيانات في LocalStorage</li>
+              <li>كود مفهوم ومنظم</li>
+            </ul>
+            <dl class="stats">
+              <div><dt>مشاريع</dt><dd>7</dd></div>
+              <div><dt>تقنيات أساسية</dt><dd>3</dd></div>
+            </dl>
+          </div>
+
+          <figure class="code-card" aria-label="نبذة بصيغة كود">
+            <figcaption>remon.js</figcaption>
+<pre dir="ltr"><code>// من أنا باختصار
+const remon = {
+  name: "Remon Alfons Waheeb",
+  title: "Front-end Developer",
+  location: "Cairo, Egypt",
+  skills: ["HTML", "CSS", "JavaScript"],
+  learning: ["Fetch API", "async/await"],
+  goal: "Full-stack Developer"
+};
+
+export default remon;</code></pre>
+          </figure>
+        </div>
+
+        <h3 class="sub-title">المهارات والتقنيات</h3>
+        <div class="grid grid-3">
+          <article class="skill"><h4>HTML5</h4><p>صفحات semantic ومنظمة</p></article>
+          <article class="skill"><h4>CSS3</h4><p>Flexbox و Grid وتصميم responsive</p></article>
+          <article class="skill"><h4>JavaScript</h4><p>Functions و arrays و objects</p></article>
+          <article class="skill"><h4>DOM &amp; Events</h4><p>تحكم في الصفحة والتفاعل مع المستخدم</p></article>
+          <article class="skill"><h4>LocalStorage</h4><p>حفظ البيانات في المتصفح وعمليات CRUD</p></article>
+          <article class="skill"><h4>Fetch API</h4><p>بتعلّمه حالياً مع async/await</p></article>
+        </div>
+        <ul class="chips center-chips" aria-label="تقنيات أساسية"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+      </div>
+    </section>
+
+    <!-- ========== 3) الأعمال ========== -->
+    <section id="portfolio" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">أعمالي</p>
+          <h2>معرض المشاريع</h2>
+        </header>
+
+        <!-- فلترة بدون JavaScript: radio + :has() -->
+        <input type="radio" name="filter" id="f-all" checked>
+        <input type="radio" name="filter" id="f-web">
+        <input type="radio" name="filter" id="f-app">
+        <div class="filters" role="group" aria-label="تصفية المشاريع">
+          <label for="f-all">الكل</label>
+          <label for="f-web">مواقع الويب</label>
+          <label for="f-app">التطبيقات</label>
+        </div>
+
+        <div class="grid grid-3 cards">
+          <article class="card" data-cat="app">
+            <div class="card-thumb t1" aria-hidden="true">📇</div>
+            <div class="card-body">
+              <span class="tag">تطبيق</span>
+              <h3>ContactHub</h3>
+              <p>تطبيق لإدارة جهات الاتصال: إضافة وتعديل وحذف وبحث وفلترة.</p>
+              <ul class="chips small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+          <article class="card" data-cat="web">
+            <div class="card-thumb t2" aria-hidden="true">🍽️</div>
+            <div class="card-body">
+              <span class="tag">موقع ويب</span>
+              <h3>What's For Dinner</h3>
+              <p>Your daily meal inspiration: فكرة وجبتك اليومية.</p>
+              <ul class="chips small"><li>HTML</li><li>CSS</li></ul>
+            </div>
+          </article>
+          <article class="card" data-cat="web">
+            <div class="card-thumb t3" aria-hidden="true">🎮</div>
+            <div class="card-body">
+              <span class="tag">موقع ويب</span>
+              <h3>GameArena</h3>
+              <p>واجهة ويب متجاوبة عن عالم الألعاب.</p>
+              <ul class="chips small"><li>HTML</li><li>CSS</li></ul>
+            </div>
+          </article>
+          <article class="card" data-cat="app">
+            <div class="card-thumb t4" aria-hidden="true">💰</div>
+            <div class="card-body">
+              <span class="tag">تطبيق</span>
+              <h3>مدبّر</h3>
+              <p>إدارة أموالك بذكاء.</p>
+              <ul class="chips small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+          <article class="card" data-cat="web">
+            <div class="card-thumb t5" aria-hidden="true">⭐</div>
+            <div class="card-body">
+              <span class="tag">موقع ويب</span>
+              <h3>The UX Review</h3>
+              <p>مشروع واجهة ويب متجاوب.</p>
+              <ul class="chips small"><li>HTML</li><li>CSS</li></ul>
+            </div>
+          </article>
+          <article class="card" data-cat="web">
+            <div class="card-thumb t6" aria-hidden="true">🚁</div>
+            <div class="card-body">
+              <span class="tag">موقع ويب</span>
+              <h3>DJI Mavic 4 Pro</h3>
+              <p>صفحة منتج لطائرة DJI Mavic 4 Pro.</p>
+              <ul class="chips small"><li>HTML</li><li>CSS</li></ul>
+            </div>
+          </article>
+          <article class="card" data-cat="web">
+            <div class="card-thumb t3" aria-hidden="true">💪</div>
+            <div class="card-body">
+              <span class="tag">موقع ويب</span>
+              <h3>FitCore Gym</h3>
+              <p>Transform Your Body at FitCore Gym: صفحة لجيم لياقة بدنية.</p>
+              <ul class="chips small"><li>HTML</li><li>CSS</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="center"><a class="btn btn-primary" href="#contact">لنتكلم عن فرصة أو فكرة</a></p>
+      </div>
+    </section>
+
+    <!-- ========== 4) الخبرة ========== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">رحلتي</p>
+          <h2>مسار التعلم والخبرة</h2>
+        </header>
+
+        <ol class="timeline">
+          <li>
+            <time>البداية</time>
+            <h3>أساسيات الويب</h3>
+            <p class="company">HTML و CSS</p>
+            <p>بناء صفحات منظمة وتصميم متجاوب بـ Flexbox و Grid.</p>
+            <ul class="chips small"><li>HTML5</li><li>CSS3</li><li>Responsive</li></ul>
+          </li>
+          <li>
+            <time>بعدها</time>
+            <h3>أساسيات JavaScript</h3>
+            <p class="company">Functions و Arrays و Objects</p>
+            <p>التحكم في الـ DOM والـ events، وعمليات CRUD مع LocalStorage.</p>
+            <ul class="chips small"><li>DOM</li><li>Events</li><li>CRUD</li><li>LocalStorage</li></ul>
+          </li>
+          <li>
+            <time>دلوقتي</time>
+            <h3>التعامل مع الـ APIs</h3>
+            <p class="company">Fetch API و async/await</p>
+            <p>بتعلّم أجيب بيانات من السيرفر وأتعامل معاها.</p>
+            <ul class="chips small"><li>Fetch API</li><li>async/await</li></ul>
+          </li>
+          <li>
+            <time>الخطوة الجاية</time>
+            <h3>React و TypeScript</h3>
+            <p class="company">وبعدها الـ Back-end</p>
+            <p>بعدها Node.js و Express وقواعد البيانات SQL/PostgreSQL، لحد ما أبني تطبيقات Full-stack كاملة.</p>
+            <ul class="chips small"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li></ul>
+          </li>
+        </ol>
+
+        <div class="grid grid-3 info-cards">
+          <article class="skill"><h4>هدفي</h4><p>أبقى Full-stack Developer وأبني تطبيقات كاملة بنفسي.</p></article>
+          <article class="skill"><h4>أسلوبي</h4><p>بفهم الكود قبل ما أنقله، وبجرّب أحل المشكلة بنفسي الأول.</p></article>
+          <article class="skill"><h4>بتعلّم إزاي</h4><p>بمشاريع حقيقية، ومراجعة كود، وتمارين.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5) التوصيات ========== -->
+    <section id="testimonials" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">آراء</p>
+          <h2>التوصيات</h2>
+        </header>
+
+        <div class="grid">
+          <figure class="quote">
+            <blockquote><p>هنا هتلاقي آراء الناس اللي اشتغلت معاهم أو اتعلمت معاهم. المساحة دي لسه فاضية، وهتتملي مع الوقت.</p></blockquote>
+            <figcaption><strong>قريباً</strong></figcaption>
+          </figure>
+        </div>
+
+        <div class="cta-block">
+          <h3>عايز تشوف شغلي أو تتكلم معايا؟</h3>
+          <p>أنا معاك لأي فرصة أو فكرة، ابعتلي رسالة.</p>
+          <div class="actions">
+            <a class="btn btn-light" href="#contact">تواصل معي الآن</a>
+            <a class="btn btn-ghost" href="#portfolio">شاهد الأعمال</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6) تواصل ========== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">تواصل معي</p>
+          <h2>يلا نتكلم</h2>
+          <p>عندك فرصة أو فكرة؟ ابعتلي رسالة.</p>
+        </header>
+
+        <div class="contact-grid">
+          <address class="contact-info">
+            <p><strong>البريد الإلكتروني</strong><br><a href="mailto:remonalfons21@gmail.com">remonalfons21@gmail.com</a></p>
+            <p><strong>رقم الهاتف</strong><br><a href="tel:+201220717981" dir="ltr">01220717981</a></p>
+            <p><strong>الموقع</strong><br>القاهرة، مصر</p>
+            <p><strong>تابعني على</strong> <a href="https://www.linkedin.com/in/remon-alfons-a5a764375/" rel="noopener" target="_blank">LinkedIn</a></p>
+            
+          </address>
+
+          <!-- نموذج غير وظيفي: لا action ولا إرسال فعلي -->
+          <form class="form" onsubmit="return false">
+            <div class="field"><label for="name">الاسم الكامل</label><input id="name" type="text" autocomplete="name"></div>
+            <div class="field"><label for="email">البريد الإلكتروني</label><input id="email" type="email" autocomplete="email"></div>
+            <div class="field full"><label for="phone">رقم الهاتف</label><input id="phone" type="tel" autocomplete="tel"></div>
+            <div class="field full"><label for="msg">رسالتك</label><textarea id="msg" rows="5"></textarea></div>
+            <button class="btn btn-primary full" type="button">ابعت الرسالة</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>ريمون الفونس وهيب</h3>
+        <p>Front-end Developer من القاهرة، بتعلّم أبقى Full-stack وبحاول أفهم كل سطر كود بكتبه.</p>
+      </div>
+      <nav aria-label="روابط سريعة">
+        <h3>روابط سريعة</h3>
+        <ul>
+          <li><a href="#hero-section">الرئيسية</a></li>
+          <li><a href="#about">عني</a></li>
+          <li><a href="#portfolio">الأعمال</a></li>
+          <li><a href="#experience">الخبرة</a></li>
+          <li><a href="#testimonials">التوصيات</a></li>
+          <li><a href="#contact">تواصل</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>بتعلّمه حالياً</h3>
+        <ul><li>Fetch API و async/await</li><li>React</li><li>TypeScript</li></ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 ريمون الفونس وهيب. جميع الحقوق محفوظة.</p>
+  </footer>
+  <dialog class="settings-panel" id="appearance-settings" aria-labelledby="appearance-title">
+    <div class="settings-panel-head">
+      <h2 id="appearance-title">إعدادات المظهر</h2>
+      <button class="settings-close" type="button" aria-label="إغلاق الإعدادات">×</button>
+    </div>
+    <fieldset class="font-options">
+      <legend>نوع الخط</legend>
+      <label class="font-choice">
+        <input type="radio" name="font-choice" value="tajawal" checked>
+        <span>Tajawal</span>
+      </label>
+      <label class="font-choice">
+        <input type="radio" name="font-choice" value="cairo">
+        <span>Cairo</span>
+      </label>
+      <label class="font-choice">
+        <input type="radio" name="font-choice" value="system">
+        <span>System UI</span>
+      </label>
+    </fieldset>
+    <fieldset class="accent-options">
+      <legend>لون الثيم</legend>
+      <label class="accent-choice">
+        <input type="radio" name="accent-choice" value="violet" checked>
+        <span class="accent-swatch swatch-violet" aria-hidden="true"></span>
+        <span>بنفسجي</span>
+      </label>
+      <label class="accent-choice">
+        <input type="radio" name="accent-choice" value="blue">
+        <span class="accent-swatch swatch-blue" aria-hidden="true"></span>
+        <span>أزرق</span>
+      </label>
+      <label class="accent-choice">
+        <input type="radio" name="accent-choice" value="green">
+        <span class="accent-swatch swatch-green" aria-hidden="true"></span>
+        <span>أخضر</span>
+      </label>
+      <label class="accent-choice">
+        <input type="radio" name="accent-choice" value="rose">
+        <span class="accent-swatch swatch-rose" aria-hidden="true"></span>
+        <span>وردي</span>
+      </label>
+    </fieldset>
+  </dialog>
+  <script>
+    const themeToggle = document.querySelector(".theme-toggle");
+    const settingsPanel = document.querySelector("#appearance-settings");
+    const settingsTrigger = document.querySelector(".settings-trigger");
+
+    const setTheme = (theme) => {
+      document.documentElement.dataset.theme = theme;
+      themeToggle.setAttribute("aria-checked", String(theme === "dark"));
+      try {
+        localStorage.setItem("color-theme", theme);
+      } catch {}
+    };
+
+    setTheme(document.documentElement.dataset.theme);
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
+    });
+
+    settingsTrigger.addEventListener("click", () => settingsPanel.showModal());
+    settingsPanel.querySelector(".settings-close").addEventListener("click", () => settingsPanel.close());
+    settingsPanel.addEventListener("click", (event) => {
+      if (event.target === settingsPanel) settingsPanel.close();
+    });
+  </script>
+</body>
+</html>
