@@ -1228,6 +1228,12 @@ input[name="filter"] {
 
 /* Responsive Design */
 @media (max-width: 900px) {
+  .settings-trigger {
+    top: 1rem;
+    right: 1rem;
+    transform: none;
+  }
+
   .header-inner {
     align-items: flex-start;
     flex-direction: column;
