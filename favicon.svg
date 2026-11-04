@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="رمز الموقع">
+  <defs>
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <path d="M20 18L10 32L20 46M44 18L54 32L44 46M36 12L28 52" fill="none" stroke="url(#iconGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
